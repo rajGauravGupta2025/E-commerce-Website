@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add this line for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+        <style>
+        /*Inside the body tag*/
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Header Container 
+
+        .custom-header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-box {
+            margin-right: 10px;
+        }
+
+        #searchButton {
+            background-color: rgb(233, 140, 103);
+            border-top-right-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        #searchButton:hover {
+            background-color: rgb(238, 162, 132);
+        }
+
+        #formText {
+            border-bottom-left-radius: 10px;
+        }
+
+        .login {
+            background-color: rgb(233, 140, 103);
+            font-weight: bold;
+        }
+
+        .login:hover {
+            background-color: rgb(238, 162, 132);
+            font-weight: bold;
+        }
+
+        .companyName {
+            color: rgb(233, 140, 103);
+        }
+
+        .cart {
+            color: rgb(233, 140, 103);
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cart:hover {
+            color: rgb(238, 162, 103);
+            transform: scale(1.2);
+        }
+
+        /*Navigation Bar
+
+        .navMainContainer {
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .navbar {
+            background-color: #565454;
+        }
+
+        .navbar a {
+            color: #080808;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(238, 162, 103);
+            color: black;
+        }
+        */
+
+        /*Carousel Sectionbelow*/
+        .carousel-caption {
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10%;
+            color: #fff;
+            max-width: 300px;
+        }
+
+        .carousel-caption h2 {
+            color: #fff;
+            font-size: 3em;
+        }
+
+        .carousel-caption p {
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .carousel-caption .btn {
+            background-color: rgb(238, 162, 103);
+            color: #333;
+            font-weight: bold;
+            border-radius: 7px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+        }
+
+        .carousel-caption .btn:hover {
+            background-color: rgb(233, 126, 83);
+        }
+
+
+        /* Card Section */
+        .card-section {
+            margin-top: 30px;
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .card img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            /* Scale up on hover */
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+            /* Scale up on hover */
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .card-text {
+            margin-top: 10px;
+        }
+
+        .card-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .card-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            /* Scale up on hover */
+        }
+
+        .featuredHeading {
+            text-align: center;
+            text-shadow: 2px 2px 4px #e02222;
+            font-weight: bold;
+            font-size: 2.4rem;
+        }
+
+        /*Footer Section
+
+        .mainFooter {
+            background-color: #080808;
+            text-align: center;
+            /* Center align the content 
+            padding: 20px 0;
+        }
+
+        .footerLink li {
+            display: inline-block;
+            margin: 0 10px;
+            /* Add margin between items 
+        }
+
+
+        .footerLink li a {
+            color: rgb(233, 140, 103);
+        }
+
+        .copywriteborder {
+            border: 0.01rem solid rgb(233, 140, 103);
+            width: 1100px;
+            margin: 20px auto;
+            opacity: 1;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .copywriteborder p {
+            color: rgb(189, 85, 44);
+            margin: 10px 0;
+        }
+
+        @media (max-width: 767px) {
+            .copywriteborder p {
+                margin: 10px 0;
+                font-size: 0.9em;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 1083px) {
+            .footerLink,
+            .footerLink li {
+                text-align: center;
+            }
+            .nav.flex-column,
+            .copywriteborder {
+                text-align: center;
+            }
+            .nav.flex-column li,
+            .copywriteborder p {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+        }*/
+    </style>
+
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- Carousel Section -->
+
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="bg1.jpg" class="d-block w-100" style="height: 600px;" alt="Carousel Image">
+                <div class="carousel-caption">
+                    <h2>Welcome to <a href="#" class="company-quote"
+                            style="text-decoration: none; color: rgb(238, 162, 103)">Apna Store</a></h2>
+                    <p>Discover a wide range of products for every occasion.</p>
+                    <button class="btn"><a href="allproducts.html" style="text-decoration: none; color: black">Shop
+                            Now</a></button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="bg2.jpg" class="d-block w-100" style="height: 600px;" alt="Carousel Image">
+                <div class="carousel-caption">
+                    <h2>New Arrivals</h2>
+                    <p style="color: rgb(195, 176, 157);">Explore the latest trends and styles for Kids.</p>
+                    <button class="btn"><a href="kids.html" style="text-decoration: none; color: black">View
+                            Collection</a></button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="bg3.webp" class="d-block w-100" style="height: 600px;" alt="Carousel Image">
+                <div class="carousel-caption">
+                    <h2>Best Offers</h2>
+                    <p style="color: rgb(29, 25, 23);">Don't miss out on our exclusive discounts and deals for Mens</p>
+                    <button class="btn"><a href="pants.html" style="text-decoration: none; color: black">Shop
+                            Now</a></button>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!--Card Section-->
+    <!-- Featured Products Heading -->
+    <h2 class="mt-4 featuredHeading">Featured Products</h2>
+
+    <!-- Card Carousel Section -->
+    <div id="cardCarousel" class="carousel slide card-section" data-ride="carousel">
+        <div class="carousel-inner bg-dark">
+            <div class="carousel-item active">
+                <div class="row card-container">
+                    <!-- Card 1 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="womendresses/1.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Flamin Yellow</h5>
+                                <p class="card-text"><b>$15</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Jarvishn Cream yellow</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="womendresses/4.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Daffodil Purple</h5>
+                                <p class="card-text"><b>$25</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Vanish pruple flamingo</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="pants/2.jpeg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Trouser</h5>
+                                <p class="card-text"><b>$34</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Heautton of darkonish</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="kids/11.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Pixel Blueiton</h5>
+                                <p class="card-text"><b>$44</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Kidkalf two pice neckil</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row card-container">
+                    <!-- Card 5 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="hoodies/3.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Cammron Gray</h5>
+                                <p class="card-text"><b>$99</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Gravishilytron with cotlin black
+                                </p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="skirts/3.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Flamin Toppli</h5>
+                                <p class="card-text"><b>$76</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Curious gratined bluton</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="shirts/2.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Golden Br Shirt</h5>
+                                <p class="card-text"><b>$23</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Chilled brown of sunrise</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="skirts/7.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Chopper Blachite</h5>
+                                <p class="card-text"><b>$45</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Short kurian grill black</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row card-container">
+                    <!-- Card 9 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="womendresses/7.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Party Red Top</h5>
+                                <p class="card-text"><b>$85</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Colinde red carpet</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="kids/9.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Dolly Silvery</h5>
+                                <p class="card-text"><b>$95</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Queen hinaputil denik</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="pants/8.webp" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Cargo Blue</h5>
+                                <p class="card-text"><b>$55</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Cluton denim pocket</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="womenpants/8.jpg" class="card-img-top" alt="Card Image" height="320px">
+                            <div class="card-body">
+                                <h5 class="card-title">Official Black</h5>
+                                <p class="card-text"><b>$46</b></p>
+                                <p class="card-text" style="color: rgb(60, 56, 56);">Ladies grill balck</p>
+                                <button class="card-button"
+                                    style="border-radius: 4px; background-color: rgb(145, 69, 11)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <a class="carousel-control-prev" href="#cardCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#cardCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+
+
+    <!-- bootstrap link -->
+
+    <!-- Bootstrap JS link -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+
+        });
+    </script>
+</body>
+
+</html>

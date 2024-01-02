@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add this line for FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Header Container */
+
+        .custom-header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-box {
+            margin-right: 10px;
+        }
+
+        #searchButton {
+            background-color: rgb(233, 140, 103);
+            border-top-right-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        #searchButton:hover {
+            background-color: rgb(238, 162, 132);
+        }
+
+        #formText {
+            border-bottom-left-radius: 10px;
+        }
+
+        .headerlogin:hover {
+            transform: scale(1.05);
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .companyName {
+            color: rgb(233, 140, 103);
+        }
+
+        .cart:hover {
+            color: rgb(238, 162, 103);
+            transform: scale(1.3);
+            transition: transform 0.6s ease-in-out;
+        }
+
+      
+        .navMainContainer {
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .navbar {
+            background-color: #565454;
+        }
+
+        .navbar a {
+            color: #080808;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgb(238, 162, 103);
+            color: black;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Header Container-->
+
+    <div class="container-fluid m-0">
+        <div class="row p-0">
+            <div class="col-md-4 custom-header p-4">
+                <!--<a href=""><img src="AS.png" alt="AS" width="55px;" height="55px;"></a>-->
+                <h3 class="companyName"><a href="#"
+                        style="text-decoration: none; font-weight: bolder; color:#e64a4a; font-style:cambria">Apna
+                        Store</a></h3>
+            </div>
+            <div class="col-md-4 custom-header d-flex justify-content-center align-items-center">
+                <div class="input-group search-box">
+                    <input type="text" id="formText" class="form-control" placeholder="Product name,Category name,etc"
+                        aria-label="Search" aria-describedby="searchButton">
+                    <div class="input-group-append">
+                        <button class="btn" type="button" id="searchButton">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 custom-header d-flex justify-content-end p-3">
+                <button class="btn headerlogin"><a href="login.html"
+                        style="padding: 8px 9px; border-radius: 4px; font-weight: bold; color: black; background-color: rgb(233,140,103); text-decoration: none;">Login</a></button>
+                <button class="btn cart"><a href="cart.html" style="font-size: 1.2rem; color: rgb(238, 162, 103);">
+                        <i class="fas fa-shopping-cart"></i></a></button>
+            </div>
+        </div>
+    </div>
+
+    <!--Navigation Bar-->
+
+    <div class="navbarContainer">
+        <div class="row m-0">
+            <div class="col p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse navMainContainer" id="navbarNav">
+                        <ul class="navbar-nav ulListContainer">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="allproducts.html">All Products</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="womenDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Women
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="womenDropdown">
+                                    <a class="dropdown-item" href="allproducts.html">All Products</a>
+                                    <a class="dropdown-item" href="dresses.html">Dresses</a>
+                                    <a class="dropdown-item" href="womensPant.html">Pants</a>
+                                    <a class="dropdown-item" href="skirts.html">Skirts</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Men
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="menDropdown">
+                                    <a class="dropdown-item" href="allproducts.html">All Products</a>
+                                    <a class="dropdown-item" href="shirts.html">Shirts</a>
+                                    <a class="dropdown-item" href="pants.html">Pants</a>
+                                    <a class="dropdown-item" href="hoodies.html">Hoodies</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kids.html">Kids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
